@@ -1,7 +1,3 @@
-import beneath
-import os
-
-from dotenv import load_dotenv
 from lib.utils import get_client
 
 
@@ -10,11 +6,11 @@ PROJECT = 'demo'
 STREAM = 'movies'
 
 
-def create_stream():
-    client = get_client()
+async def create_stream():
+    client = await get_client()
     await client.start()
 
-    stream = await client.create_stream(
+    await client.create_stream(
         f"{USERNAME}/{PROJECT}/{STREAM}",
         schema="""
             " A stream of movies "

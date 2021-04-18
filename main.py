@@ -1,13 +1,14 @@
-from time import sleep
+import asyncio
+
 from lib.data.movies import write_data
 from lib.streams.movies import create_stream
 
 
-if __name__ == '__main__':
-    create_stream()
+async def runner():
+    await create_stream()
+    await write_data()
 
-    # Keep sending events every second to mock live behavior
-    while True:
-        write_data()
-        sleep(1)
-        
+
+if __name__ == '__main__':
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(runner())

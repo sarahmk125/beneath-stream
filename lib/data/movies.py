@@ -1,11 +1,37 @@
+import aiohttp
+import asyncio
+import random
+
 from datetime import datetime
+from lib.utils import get_stream
+from lib.streams.movies import USERNAME, PROJECT, STREAM
 
 
-def write_data():
-    await stream.write({
-        "title":       "Star Wars: Episode IV",
-        "released_on": datetime(year=1977, month=5, day=25),
-        "director":    "George Lucas",
-        "budget_usd":  11000000,
-        "rating":      8.6,
-    })
+async def write_data():
+    # Write a whole dataset as an example
+    # load a dataset of movies
+    url = "https://raw.githubusercontent.com/vega/vega/master/docs/data/movies.json"
+    async with aiohttp.ClientSession() as session:
+        async with session.get(url) as res:
+            movies = await res.json(content_type=None)
+
+    # Get the stream
+    stream = get_stream(USERNAME, PROJECT, STREAM)
+
+    # write a 100 random movies one-by-one
+    n = 10
+    for i in range(n):
+        # get a random movie
+        movie = random.choice(movies)
+
+        # transform and write the movie
+        await stream.write({
+            "title": str(movie["Title"]),
+            "released_on": datetime.strptime(movie["Release Date"], "%b %d %Y"),
+            "director": movie["Director"],
+            "budget_usd": movie["Production Budget"],
+            "rating": movie["IMDB Rating"],
+        })
+
+        # wait a while
+        await asyncio.sleep(1)
