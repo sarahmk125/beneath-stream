@@ -17,4 +17,4 @@ Further setup:
 ## Issues
 
 - On MacOS, need to run `xcode-select --install` to avoid the error documented in `beneath_sdk_error.txt`
-- When creating a project from the commandline, ran into error documented in `cli_create_project_error.txt`. Got around this by creating a project directly in the Console.
+- When creating a project from the commandline, ran into error documented in `cli_create_project_error.txt`. This also occurs when trying to authenticate via Python SDK.
