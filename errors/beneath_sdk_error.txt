@@ -1,0 +1,49 @@
+    ERROR: Command errored out with exit status 1:
+     command: /Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-install-2ac22fe6/fastavro/setup.py'"'"'; __file__='"'"'/private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-install-2ac22fe6/fastavro/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-record-t3x6jhy3/install-record.txt --single-version-externally-managed --compile --install-headers /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/fastavro
+         cwd: /private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-install-2ac22fe6/fastavro/
+    Complete output (41 lines):
+    running install
+    running build
+    running build_py
+    creating build
+    creating build/lib.macosx-10.9-x86_64-3.9
+    creating build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_schema_common.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_schema_py.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_logical_writers_py.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/json_read.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/write.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_write_py.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_read_py.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/json_write.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_read_common.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_validate_common.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/logical_writers.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_validation_py.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/six.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/_timezone.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/__main__.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/const.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/schema.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/read.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    copying fastavro/validation.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro
+    creating build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/binary_decoder.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/__init__.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/binary_encoder.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/parser.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/symbols.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/json_encoder.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    copying fastavro/io/json_decoder.py -> build/lib.macosx-10.9-x86_64-3.9/fastavro/io
+    running build_ext
+    building 'fastavro._read' extension
+    creating build/temp.macosx-10.9-x86_64-3.9
+    creating build/temp.macosx-10.9-x86_64-3.9/fastavro
+    gcc -Wno-unused-result -Wsign-compare -Wunreachable-code -fno-common -dynamic -DNDEBUG -g -fwrapv -O3 -Wall -arch x86_64 -g -I/Library/Frameworks/Python.framework/Versions/3.9/include/python3.9 -c fastavro/_read.c -o build/temp.macosx-10.9-x86_64-3.9/fastavro/_read.o
+    xcrun: error: invalid active developer path (/Library/Developer/CommandLineTools), missing xcrun at: /Library/Developer/CommandLineTools/usr/bin/xcrun
+    error: command '/usr/bin/gcc' failed with exit code 1
+    ----------------------------------------
+ERROR: Command errored out with exit status 1: /Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9 -u -c 'import sys, setuptools, tokenize; sys.argv[0] = '"'"'/private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-install-2ac22fe6/fastavro/setup.py'"'"'; __file__='"'"'/private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-install-2ac22fe6/fastavro/setup.py'"'"';f=getattr(tokenize, '"'"'open'"'"', open)(__file__);code=f.read().replace('"'"'\r\n'"'"', '"'"'\n'"'"');f.close();exec(compile(code, __file__, '"'"'exec'"'"'))' install --record /private/var/folders/62/1kzvb5ks44v5pgpqstt9phrw0000gn/T/pip-record-t3x6jhy3/install-record.txt --single-version-externally-managed --compile --install-headers /Library/Frameworks/Python.framework/Versions/3.9/include/python3.9/fastavro Check the logs for full command output.
+WARNING: You are using pip version 20.2.3; however, version 21.0.1 is available.
+You should consider upgrading via the '/Library/Frameworks/Python.framework/Versions/3.9/bin/python3.9 -m pip install --upgrade pip' command.
