@@ -10,7 +10,7 @@ First, create a secret in the Console. Then:
 
 To run in Docker (preferred):
 - `make build` then `make run`
-- This puts you in bash. `cd beneath-stream` and `python main.py` runs the script.
+- This puts you in bash. `cd beneath-stream` and `python main.py` runs the script. NOTE: This can be improved by successfully mounting the `beneath-stream` folder as a volume. This isn't done yet so it's a bit clunky right now.
 
 Further setup:
 - Create a `.env` file copying `secrets_example.env`, updating to your Beneath secret. NOTE: This seems to be quirky, explained below (in reference to `secrets.txt`)
