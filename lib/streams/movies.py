@@ -23,3 +23,5 @@ async def create_stream():
             }
         """,
         update_if_exists=True)
+
+    await client.stop()

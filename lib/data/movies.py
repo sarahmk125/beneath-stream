@@ -3,11 +3,15 @@ import asyncio
 import random
 
 from datetime import datetime
-from lib.utils import get_stream
+from lib.utils import get_stream, get_client
 from lib.streams.movies import USERNAME, PROJECT, STREAM
 
 
 async def write_data():
+    # First, get the client
+    client = await get_client()
+    await client.start()
+
     # Write a whole dataset as an example
     # load a dataset of movies
     url = "https://raw.githubusercontent.com/vega/vega/master/docs/data/movies.json"
@@ -16,7 +20,7 @@ async def write_data():
             movies = await res.json(content_type=None)
 
     # Get the stream
-    stream = get_stream(USERNAME, PROJECT, STREAM)
+    stream = await get_stream(USERNAME, PROJECT, STREAM)
 
     # write a 100 random movies one-by-one
     n = 10
@@ -35,3 +39,5 @@ async def write_data():
 
         # wait a while
         await asyncio.sleep(1)
+
+    await client.stop()

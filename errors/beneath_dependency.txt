@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.7/dist-packages/beneath/__init__.py", line 3, in <module>
+    import importlib.metadata as importlib_metadata
+ModuleNotFoundError: No module named 'importlib.metadata'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 3, in <module>
+    from lib.data.movies import write_data
+  File "/beneath-stream/lib/data/movies.py", line 6, in <module>
+    from lib.utils import get_stream
+  File "/beneath-stream/lib/utils.py", line 2, in <module>
+    import beneath
+  File "/usr/local/lib/python3.7/dist-packages/beneath/__init__.py", line 5, in <module>
+    import importlib_metadata
+ModuleNotFoundError: No module named 'importlib_metadata'

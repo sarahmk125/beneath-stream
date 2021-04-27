@@ -1,0 +1,16 @@
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    loop.run_until_complete(runner())
+  File "/usr/lib/python3.7/asyncio/base_events.py", line 579, in run_until_complete
+    return future.result()
+  File "main.py", line 9, in runner
+    await write_data()
+  File "/beneath-stream/lib/data/movies.py", line 37, in write_data
+    "rating": movie["IMDB Rating"],
+  File "/usr/local/lib/python3.7/dist-packages/beneath/stream.py", line 231, in write
+    await self.primary_instance.write(records)
+  File "/usr/local/lib/python3.7/dist-packages/beneath/instance.py", line 167, in write
+    await self._client.write(self, records)
+  File "/usr/local/lib/python3.7/dist-packages/beneath/client.py", line 283, in write
+    raise Exception("Cannot call write because the client is stopped")
+Exception: Cannot call write because the client is stopped

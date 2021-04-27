@@ -17,5 +17,6 @@ async def get_client():
 
 async def get_stream(username, project, stream):
     client = await get_client()
-    stream = await client.find_stream(path=f'{username}/{project}/{stream}')
+    stream = await client.find_stream(stream_path=f'{username}/{project}/{stream}')
+    await client.stop()
     return stream
