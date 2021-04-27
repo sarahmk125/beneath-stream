@@ -1,4 +1,4 @@
-# Beneath SDK
+# Beneath SDK Demo
 
 This repo starts to build streaming pipelines with the [Beneath Python SDK](https://about.beneath.dev/docs/quick-starts/install-sdk/), a hosted streaming solution for data engineers and data scientists. For setup, I signed up at beneath.dev and created a secret token.
 
