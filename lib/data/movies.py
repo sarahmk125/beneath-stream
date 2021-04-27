@@ -8,7 +8,7 @@ from lib.streams.movies import USERNAME, PROJECT, STREAM
 
 
 async def write_data():
-    # First, get the client
+    # First, get and start the client
     client = await get_client()
     await client.start()
 
