@@ -28,4 +28,4 @@ MacOS related:
 Running in Docker (on `ubuntu` 18.04 image):
 - Running on Docker, I get the issue in `beneath_sdk_get_secret_docker.txt`. However, this is resolved by copying the `secret.txt` file to `/root/.beneath/secret.txt` in the container.
 - When running the script I get `ModuleNotFoundError: No module named 'importlib_metadata'`. This is solved by installing `importlib-metadata`. This is documented in `beneath_dependency.txt`
-- It's not immediately clear when I need to start the client; I run `await stream.write()` and get the Client not started error documented in `client_error.txt` - this is in the API Docs on the stream, but not in the general docs.
+- It's not immediately clear when I need to start the client; I run `await stream.write()` and get the Client not started error documented in `client_error.txt` - this is in the API Docs on the stream, but not in the general docs. NOTE: UNRESOLVED
