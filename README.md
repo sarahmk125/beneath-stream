@@ -15,6 +15,10 @@ To run in Docker (preferred):
 Further setup:
 - Create a `.env` file copying `secrets_example.env`, updating to your Beneath secret. NOTE: This seems to be quirky, explained below (in reference to `secrets.txt`)
 
+Notes:
+- On Mac: Python 3.9.0
+- In Docker ubuntu container: Python 3.7.5
+
 ## Suggestions
 
 - Schema for stream to be an object of some sort instead of string; a string might be more prone to types or syntax errors.
